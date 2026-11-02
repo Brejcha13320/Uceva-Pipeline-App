@@ -48,6 +48,10 @@ jobs:
       - name: Build Angular
         run: npm run build -- --base-href "/${{ github.event.repository.name }}/"
 
+      # 7. Configure SPA fallback
+      - name: Configure GitHub Pages fallback
+        run: cp ./dist/pipeline-app/browser/index.html ./dist/pipeline-app/browser/404.html
+
       # 7. Subir artefacto generado
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
