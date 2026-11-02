@@ -42,7 +42,7 @@ jobs:
 
       # 5. Ejecutar pruebas unitarias
       - name: Run Unit Tests
-        run: npm test -- --runInBand --coverage
+        run: npm test
 
       # 6. Generar build de Angular
       - name: Build Angular
